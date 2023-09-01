@@ -66,7 +66,7 @@ def analyze(request):
                 character_count = len(djtext)
                 response_text = f"Character Count: {character_count}"
                 return HttpResponse(response_text)
-        else:
+
             params = {'purpose': 'Text Analysis', 'analyzed_text': analyzed}
             return render(request, 'analyze.html', params)
 
